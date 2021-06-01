@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0; padding: 0;
+}
+
+body {
+  font-family: "Brandon Text",Asap,Verdana,Arial,Roboto, "Lucida Grande",Arial,'Open Sans', sans-serif;
+  background-color: #306fb3;
+  color: black;
+  font-weight:400
+}
+
+
+/*  Tableau */
+
+tr {
+  line-height: 18px;
+}
+
+thead {
+  border-bottom: 3px solid #ee171f;
+  color : darkblue;
+  font-weight:bold;
+}
+
+/* lien */
+
+a, a:hover, a:visited, a:active
+{
+  text-decoration:none;
+}
+
+/* les champs de saisie */
+
+.obligatoire:after {
+  color: red;
+  content: ' *';
+}
+
+input {
+  transition: color 2s, height 2s, background-color 2s !important;
+}
+
+input::placeholder {
+  font-size: 0.8rem;
+}
+
+input.erreur {
+  background-color: #FF4500 !important;
+  color: #FFFFFF !important;
+}
+
+input.correct {
+  background-color: #32CD32 !important;
+  color: #FFFFFF !important;
+}
+
+label {
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+/* RETIRER LES FLÈCHES DES INPUTS NUMBER */
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Chrome */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin:0;
+}
+
+/* Opéra*/
+input::-o-inner-spin-button,
+input::-o-outer-spin-button {
+  -o-appearance: none;
+  margin:0
+}
+
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25em;
+}
+
+.messageErreur {
+  font-size: 0.8rem;
+  font-style : italic;
+  color : red;
+}
+
+.commentaire {
+  font-size: 0.8rem;
+  font-style : italic;
+}
+
+/* une page avec un cadre central */
+
+#corps {
+  border-radius: 4px;
+  padding: 5px;
+  margin : 5px;
+  background-color: #FFF;
+  min-height: 680px;
+}
+
+#corps2 {
+  border-radius: 4px;
+  padding: 0px;
+  margin : 0px;
+  background-color: transparent;
+  min-height: 680px;
+}
+
+.titreCadre {
+  font-weight: bold;
+  color: #000;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #D7DBDF;
+  margin-bottom: 0px;
+}
+
+/* les boutons */
+
+a.bouton {
+  display: inline-block;
+  font-weight: bold;
+  background-color: rgb(104, 160, 221);
+  color: white;
+  margin-left : 10px;
+  padding: 3px 10px 2px 10px;
+  transform: skew(-20deg, -5deg);
+  text-align: center;
+  max-height: 30px;
+  cursor: pointer;
+}
+
+a:hover.retour {
+  background-color: #eb073c;
+}
+
+/* Mise en forme du texte */
+
+
+
+.titre {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.cadreDoc{
+  border: 1px dashed ;
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  padding : 15px;
+  font-style : italic;
+}
+
+.cadreUpload{
+  border: 1px dashed ;
+  height: 180px;
+  width: 180px;
+  text-align: center;
+  padding : 15px;
+  display: inline-block;
+}
+
+/* un menu */
+.menu a {
+  transition: all 1s ease-out;
+}
+
+.menu a:hover {
+  transform: scale(1.05);
+  border-radius: 10px;
+}
+
+
+a2.dropdown-item {
+  transition: all 1s ease-out;
+
+}
+
+a.dropdown-item:hover  {
+  color : white; !important;
+  border :1px solid #FF0000;
+  background-color : #004080;
+}
+
+a.dropdown-item {
+  border: 1px solid white;
+}
+
+/* mise en forme d'un compte à rebours */
+#horloge{
+  font-family: sans-serif;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 20px;
+}
+
+#horloge > div{
+  padding: 5px;
+  border-radius: 3px;
+  background: #0f3f8c;
+  display: inline-block;
+  min-width: 80px;
+}
+
+#horloge div > span{
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  background: #ee171f;
+  display: inline-block;
+}
+
+
+/* ck editor */
+.ck-editor__editable {
+  min-height: 200px;
+  max-height: 400px;
+}
+
+/* fixer certains paramètres en fonction de la taille de l'écran
+Extra small <576px	Small ≥576px	 Medium ≥768px Large ≥992px	 Extra large ≥1200px
+*/
+
+/* pour une taille inférieure à 576 px */
+@media (max-width: 576px) {
+  .masquer {
+    display : none;
+  }
+  .image  { display : none }
+  html  {font-size: 10px; }
+}
+
+/* à partir de 576 px */
+@media (min-width: 576px) {
+  html  {font-size: 11px; }
+  .image { display: block; margin-left: auto; margin-right: auto; max-width: 100% }
+}
+
+/* à partir de 768 px  */
+@media (min-width: 768px) {
+  html  {font-size: 12px; }
+}
+
+/* à partir de 992 px  */
+@media (min-width: 992px) {
+  html  {font-size: 13px; }
+}
+
+/* à partir de 1200 px */
+@media (min-width: 1200px) {
+  html  {font-size: 14px; }
+}
+
+/* à partir de 1600 px  */
+@media (min-width: 1600px) {
+  html  {font-size: 16px; }
+}
+

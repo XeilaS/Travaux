@@ -1,0 +1,53 @@
+#corps{
+    user-select: none;
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid{
+    min-width: 470px;
+    display: grid;
+    padding: 30px 0 10px 0;
+    grid-template-columns: 1fr 5fr 10fr 5fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+
+
+#bin{
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+#abtInformation, #autMail{
+    cursor: pointer;
+}
+
+input{
+    color: black;
+    background-color: white;
+    font-weight: bold !important;
+    border: 1px solid darkgray !important;
+}
+
+
+.checked{
+    height: 100%;
+    width: 50%;
+}
+
+.grid > div{
+    height: 50px;
+    display: flex;
+}
+
+.abtCell{
+    grid-column:2/4;
+}

@@ -1,0 +1,75 @@
+:focus {outline:none;}
+
+#corps{
+    user-select: none;
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.tab{
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    line-height: 50px;
+    gap: 25px 0;
+}
+
+.tab > *{
+    display: flex;
+}
+
+.tab > * > label, .tab > * > select, .tab > * > button{
+    margin: auto 0 auto 0;
+}
+
+.tab > .inputCell{
+    grid-column: 2/4;
+}
+
+
+.btncell{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    line-height: 20px;
+    grid-column: 1/4;
+    transition: all 0.5s ease-in-out;
+}
+
+.tab input {
+    height: 100%;
+    width: 100%;
+    font-weight: bold !important;
+    border: 1px solid darkgray !important;
+}
+
+#nomCheck, #emailCheck, #passwordCheck, #passwordConfirmCheck{
+    margin-left: 10px;
+    width: 50px;
+}
+
+
+@media (max-width: 576px) {
+    .tab{
+        grid-template-columns: 4fr 1fr;
+        line-height: 30px;
+        gap: 0;
+        margin-top: 10px;
+    }
+    .tab > .lblcell{
+        grid-column: 1/4;
+        margin-top: 15px;
+    }
+    .tab > .inputCell{
+        grid-column: 1/4;
+    }
+
+    .tab input {
+        height: 40px;
+    }
+    .btncell{
+        grid-column: 1/4;
+    }
+}
